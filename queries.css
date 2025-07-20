@@ -1,0 +1,230 @@
+@media (max-width: 768px) {
+  body {
+    font-size: 15px;
+  }
+  .nav-container {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 1em;
+  }
+  .hamburger {
+    display: flex;
+  }
+  .nav-links {
+    position: absolute;
+    top: 4.2em;
+    left: 0;
+    right: 0;
+    background-color: var(--baseShade1);
+    color: #ffffff;
+    flex-direction: column;
+    gap: 1em;
+    padding: 1em 2em;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    align-items: center;
+    display: none;
+  }
+  .nav-links.active {
+    display: flex;
+  }
+  .nav-links a {
+    transition: color 0.4s ease;
+    color: var(--whiteShade1);
+  }
+  .nav-links a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--whiteShade1);
+    transition: width 0.4s ease;
+  }
+  .nav-links a:hover {
+    color: var(--whiteShade1);
+  }
+  .nav-links a:hover::after {
+    width: 100%;
+  }
+  section {
+    padding: 2em 4em;
+  }
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-content-img img {
+    width: 500px;
+  }
+  .hero-content-text h1 {
+    font-size: 2.5em;
+    margin: 0.5em 0 1em 0;
+  }
+  .hero-content .label {
+    font-size: 0.9em;
+  }
+  .why-choose-us {
+    padding: 4em;
+  }
+  .why-choose-us h2 {
+    font-size: 2em;
+  }
+  .why-choose-us-content {
+    flex-direction: column;
+  }
+  .why-choose-us-content .card {
+    background-color: var(--whiteShade1);
+    padding: 2em 6em;
+    border-radius: 1em;
+  }
+  .how-it-works-content {
+    flex-direction: column;
+  }
+  .cuisine-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .featured-cuisine h2 {
+    font-size: 2em;
+  }
+  .cuisine-card h3 {
+    font-size: 0.8em;
+    color: var(--blackShade1);
+  }
+  .cuisine-card h4 {
+    font-size: 0.7em;
+    color: var(--baseShade1);
+  }
+  .cuisine-card img {
+    width: 150px;
+  }
+  .download-the-app h2 {
+    font-size: 1.8em;
+    line-height: 1.4;
+  }
+  .download-the-app-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "feature1 phone feature2"
+      "feature3 phone feature4";
+    gap: 1.5em;
+    align-items: center;
+    justify-content: center;
+  }
+  .feature-box:nth-child(1) {
+    grid-area: feature1;
+  }
+  .feature-box:nth-child(2) {
+    grid-area: feature2;
+  }
+  .feature-box:nth-child(3) {
+    grid-area: feature3;
+  }
+  .feature-box:nth-child(4) {
+    grid-area: feature4;
+  }
+  .phone-preview {
+    grid-area: phone;
+  }
+  .phone-preview img {
+    width: 180px;
+    height: auto;
+  }
+  .btn {
+    width: 130px;
+    margin: 1em 0.5em;
+  }
+  .side-image.left,
+  .side-image.right {
+    display: none;
+  }
+  .feature-box {
+    text-align: center;
+  }
+  .feature-box img {
+    width: 50px;
+    height: auto;
+  }
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  .footer-section {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+  h2 {
+    font-size: 1.5em;
+  }
+  section {
+    padding: 2em;
+  }
+  .hero-content-text h1 {
+    font-size: 2em;
+  }
+  .hero-content-img img {
+    width: 450px;
+    margin-top: 1.5em;
+  }
+  .why-choose-us .card {
+    padding: 2em 1em;
+  }
+  .why-choose-us {
+    padding: 2em;
+  }
+  .cuisine-grid {
+    grid-template-columns: 1fr;
+  }
+  .download-the-app-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "feature1"
+      "feature2"
+      "feature3"
+      "feature4"
+      "phone";
+    gap: 1em;
+    justify-items: center;
+    align-items: center;
+  }
+  .feature-box {
+    max-width: 200px;
+    padding: 1em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .feature-box img {
+    width: 40px;
+    height: auto;
+    margin-bottom: 0.5em;
+  }
+  .phone-preview {
+    grid-area: phone;
+    text-align: center;
+    margin-top: 1em;
+  }
+  .phone-preview img {
+    width: 200px;
+    height: auto;
+  }
+  .download-the-app .btn {
+    width: 100px;
+  }
+  .side-image.left,
+  .side-image.right {
+    display: none;
+  }
+}
